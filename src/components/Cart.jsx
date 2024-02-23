@@ -6,4 +6,7 @@ async function getCart() {
     await const goToBasket = () => {
         window.location.href = '/cart';
     }
-}
+    return ()
+};
+
+export default function Cart();
