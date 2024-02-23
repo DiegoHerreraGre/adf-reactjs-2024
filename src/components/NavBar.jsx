@@ -1,23 +1,35 @@
 import React, {useState} from 'react';
-import { FaHome, FaBars, FaTeamspeak } from "react-icons/fa";
+import { FaHome, FaBars } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import '../App.css';
 
 function NavBar() {
     const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+    const [colorChange, setColorChange] = useState(false);
+    const [wordOnNavBar, setWordOnNavBar] = useState(false);
+
+    const handleClick = async () => {
+        setWordOnNavBar(true);
+        setClick(!click);
+        setColorChange(true);
+        await new Promise((resolve) => {
+            setTimeout(() => {
+                resolve();
+            }, 10000);
+        });
+        setWordOnNavBar(false);
+        setClick(false);
+        setColorChange(false);
+    };
 
     return (
-        <nav className="navbar" onMouseLeave={closeMobileMenu}>
+        <nav className={`navbar ${colorChange ? 'navbar-color-change' : ''}`} onMouseLeave={handleClick}>
             <h1>Armando Di Filippo</h1>
             <section className="navbar-container-principal">
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaHome/> : <FaBars/>}
                 </div>
-                <div className="navbar-container">
-
-                </div>
+                {wordOnNavBar && <div className="message"><p>Activaste el efecto secreto</p></div>}
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <Link to='/' className="nav-links">

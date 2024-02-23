@@ -4,16 +4,32 @@ function Home() {
     return (
         <section id='home-main'>
             <h2>Mi historia</h2>
-            <article>
+            <article id='container-art-list'>
                 <ul>
-                    <span id='presentation-home'>Mis temas de trabajo</span>
-                    <li>Desarrollo económico y social</li>
-                    <li>Relaciones Económicas Internacionales</li>
-                    <li>Integración Regional</li>
-                    <li>Migraciones y Relaciones Laborales</li>
-                    <li>Filosofía Económica</li>
-                    <li>Licenciado en Ciencias Económicas</li>
-                    <li>Magíster en Ciencias Económicas</li>
+                    <div id='container-div-list'>
+                        <span id='presentation-home'><marquee>Mis temas de trabajo</marquee></span>
+                        <div className='container-list'>
+                            <li>Desarrollo económico y social</li>
+                        </div>
+                        <div className='container-list'>
+                            <li>Relaciones Económicas Internacionales</li>
+                        </div>
+                        <div className='container-list'>
+                            <li>Integración Regional</li>
+                        </div>
+                        <div className='container-list'>
+                            <li>Migraciones y Relaciones Laborales</li>
+                        </div>
+                        <div className='container-list'>
+                            <li>Filosofía Económica</li>
+                        </div>
+                        <div className='container-list'>
+                            <li>Licenciado en Ciencias Económicas</li>
+                        </div>
+                        <div className='container-list'>
+                            <li>Magíster en Ciencias Económicas</li>
+                        </div>
+                    </div>
                 </ul>
                 <div>
                     <h4>Profesor invitado en:</h4>
