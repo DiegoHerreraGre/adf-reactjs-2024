@@ -3,11 +3,10 @@ import '../App.css'
 function Home() {
     return (
         <section id='home-main'>
-            <h2>Mi historia</h2>
             <article id='container-art-list'>
+                <span id='presentation-home' className='marquee'>Mis temas de trabajo</span>
                 <ul>
                     <div id='container-div-list'>
-                        <span id='presentation-home'><marquee>Mis temas de trabajo</marquee></span>
                         <div className='container-list'>
                             <li>Desarrollo económico y social</li>
                         </div>
@@ -29,9 +28,12 @@ function Home() {
                         <div className='container-list'>
                             <li>Magíster en Ciencias Económicas</li>
                         </div>
+                        <div className='container-list'>
+                            <li>Historia de la economía política y latinoamericana</li>
+                        </div>
                     </div>
                 </ul>
-                <div>
+                <div id='universal-desc'>
                     <h4>Profesor invitado en:</h4>
                     <div className='main-positions-universities'>
                         <p>
@@ -70,7 +72,8 @@ function Home() {
                     </div>
                     <div className='main-positions-universities'>
                         <p>
-                            Universidad Jesuita Alberto Hurtado, años 2000 hasta la actualidad, Profesor Regular en múltiples asignaturas. Actualmente soy profesor en tres diferentes programas de Magíster.
+                            Universidad Jesuita Alberto Hurtado, años 2000 hasta la actualidad, Profesor Regular en
+                            múltiples asignaturas. Actualmente soy profesor en tres diferentes programas de Magíster.
                         </p>
                     </div>
                 </div>

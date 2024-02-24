@@ -4,6 +4,7 @@
     --box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
     --text-shadow: 0px 4px 10px #000000;
     --font-family: "Roboto Thin", sans-serif;
+    --background-color-hover: rgba(255, 213, 213, 0.54);
 }
 
 * {
@@ -20,6 +21,49 @@ h1 {
     color: #003a7e;
     text-shadow: var(--text-shadow);
 }
+
+#container-art-list {
+    #universal-desc {
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 10px;
+        margin: 40px;
+        padding: 20px;
+        li {
+            list-style: none;
+        }
+        h4 {
+            font-size: 30px;
+            font-weight: 800;
+            color: #000000;
+            text-align: center;
+            margin: 20px;
+        }
+        .main-positions-universities {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+            border-style: solid rgba(0, 0, 0, 0.23);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            &:hover {
+                transform: scale(1);
+                transition: ease-in-out 2s;
+                background-color: var(--background-color-hover);
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+            }
+        }
+            p {
+                font-size: 20px;
+                font-weight: 200;
+                color: #000000;
+            }
+        }
+    }
 
 .navbar-container-principal {
     display: flex;
@@ -293,43 +337,31 @@ footer {
 
 #home-main {
     position: relative;
-    h2 {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
     article ul div span#presentation-home {
         position: absolute;
-        margin-top: 30px;
-            marquee {
-                width: 500px;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 2rem;
-                color: black;
-                font-weight: bold;
-                }
+        display: flex;
+        justify-content: flex-start;
+        font-size: 50px;
             }
         }
 
 
 #container-div-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 20px;
+    padding: 20px;
     li {
         list-style: none;
     }
     .container-list {
         border-style: groove;
         padding: 20px;
-        margin-top: 100px;
-        margin-bottom: 100px;
         background-color: rgba(255, 213, 213, 0.54);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
@@ -360,12 +392,12 @@ li#book-container-list div#book-container div#icon-container {
 }
 
 @keyframes colorChange {
-    0% {background-color: #6a0575;}
-    20% {background-color: #8b1791;}
-    40% {background-color: #ad2bad;}
-    60% {background-color: #cf3fc9;}
-    80% {background-color: #f153e5;}
-    100% {background-color: #6a0575;}
+    0% {background-color: rgba(232, 90, 248, 0.47);}
+    20% {background-color: rgba(139, 23, 145, 0.44);}
+    40% {background-color: rgba(97, 43, 173, 0.55);}
+    60% {background-color: rgba(207, 63, 201, 0.69);}
+    80% {background-color: rgba(241, 83, 229, 0.57);}
+    100% {background-color: rgba(106, 5, 117, 0.59);}
 }
 
 .navbar-color-change {
@@ -379,5 +411,28 @@ li#book-container-list div#book-container div#icon-container {
         color: #000000;
         text-align: center;
         margin: 20px;
+    }
+}
+
+.marquee {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgba(255, 32, 32, 0.23);
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
