@@ -5,6 +5,8 @@
     --text-shadow: 0px 4px 10px #000000;
     --font-family: "Roboto Thin", sans-serif;
     --background-color-hover: rgba(255, 213, 213, 0.54);
+    --background-standard: #f8f9fa;
+    --background-color-diff: rgba(142, 62, 97, 0.36);
 }
 
 * {
@@ -274,8 +276,11 @@ footer {
 #books-desc-main {
     display: flex;
     justify-content: center;
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    margin-bottom: 200px;
     h3 {
         font-size: 50px;
         margin-left: 70px;
@@ -288,7 +293,18 @@ footer {
         font-size: 30px;
         font-weight: 800;
         color: #000000;
+        text-align: justify;
+        margin: 60px;
         }
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 800;
+        width: 10%;
+        &:hover {
+            color: #ff2020;
+        }
+    }
     #effect-shake {
         margin: 80px;
         font-family: var(--font-family);
@@ -296,26 +312,32 @@ footer {
         font-weight: 800;
         color: #c720ff;
         animation: fa-shake 2s infinite;
-
         }
     #p-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 20px;
         border-style: groove;
+        width: 75%;
+        background-color: rgba(142, 62, 97, 0.36);
         border-radius: var(--border-radius);
-        padding: 20px;
+        padding: 30px;
         box-shadow: var(--box-shadow)
     }
     .p-working-css {
         font-size: 20px;
-        font-weight: 200;
+        font-weight: 700;
         font-style: italic;
         color: #000000;
     }
-}
+    #p-container:hover {
+        background-color: var(--background-color-hover);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        transition: ease-in-out 2s;
+        }
+    }
 
 @keyframes fa-shake {
     0% {
