@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/css/main.0358264b.css",
-    "main.js": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/js/main.2c3bc007.js",
-    "static/js/444.2df967d7.chunk.js": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/js/444.2df967d7.chunk.js",
-    "static/js/592.81af1c96.chunk.js": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/js/592.81af1c96.chunk.js",
-    "static/media/img3.jpg": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/media/img3.3df63ad93e0ff4a108de.jpg",
-    "static/media/img2.jpg": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/media/img2.8e72b5ce49fd0bb0cb22.jpg",
-    "static/media/img1.jpg": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/media/img1.20ed6e46b39021b1c6e3.jpg",
-    "index.html": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/index.html",
-    "main.0358264b.css.map": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/css/main.0358264b.css.map",
-    "main.2c3bc007.js.map": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/js/main.2c3bc007.js.map",
-    "444.2df967d7.chunk.js.map": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/js/444.2df967d7.chunk.js.map",
-    "592.81af1c96.chunk.js.map": "/%3CYOUR_GITHUB_USERNAME%3E.github.io/%3CREPO_NAME%3E,/static/js/592.81af1c96.chunk.js.map"
+    "main.css": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/css/main.0358264b.css",
+    "main.js": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/js/main.2b5480e8.js",
+    "static/js/444.2df967d7.chunk.js": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/js/444.2df967d7.chunk.js",
+    "static/js/592.81af1c96.chunk.js": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/js/592.81af1c96.chunk.js",
+    "static/media/img3.jpg": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/media/img3.3df63ad93e0ff4a108de.jpg",
+    "static/media/img2.jpg": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/media/img2.8e72b5ce49fd0bb0cb22.jpg",
+    "static/media/img1.jpg": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/media/img1.20ed6e46b39021b1c6e3.jpg",
+    "index.html": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/index.html",
+    "main.0358264b.css.map": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/css/main.0358264b.css.map",
+    "main.2b5480e8.js.map": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/js/main.2b5480e8.js.map",
+    "444.2df967d7.chunk.js.map": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/js/444.2df967d7.chunk.js.map",
+    "592.81af1c96.chunk.js.map": "/DiegoHerreraGre.github.io/adf-reactjs-2024,/static/js/592.81af1c96.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0358264b.css",
-    "static/js/main.2c3bc007.js"
+    "static/js/main.2b5480e8.js"
   ]
 }
