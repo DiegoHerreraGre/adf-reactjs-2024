@@ -1,11 +1,14 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import {CgAdd, CgCloseR} from 'react-icons/cg';
 import { FaShoppingBasket } from 'react-icons/fa';
-import books2024 from '../data.js';
+import books2024 from '../data';
+import bookImage from '../bookImage';
 import { Link } from 'react-router-dom';
 import '../App.css'
 
 function Books() {
+    const {id} = useParams();
     const [clickNumber, setClickNumber] = React.useState(0);
     const [cart, setCart] = React.useState(0);
 
@@ -22,11 +25,14 @@ function Books() {
     const goToBasket = () => {
         window.location.href = '/cart';
     }
-
     const bookItems = books2024.map(({id, title, source, year, editorial, price}) => {
+        const bookId = bookImage[id];
         return (
             <li id='book-container-list' key={id} title={title}>
                 <div id='book-container'>
+                    <div id='img-container-book'>
+                        <img src={bookId} alt={title}/>
+                    </div>
                     <Link className='link-book-container' to={`/books/${id}`}>{title}</Link>
                     <span className='content-book' id='price-tag'>{price}</span>
                     <span className='content-book'>{year}</span>

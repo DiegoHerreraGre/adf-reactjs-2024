@@ -160,12 +160,6 @@ h1 {
             align-items: center;
             flex-wrap: wrap;
             margin: 20px;
-            img {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                margin: 20px;
-            }
             ul {
                 list-style: none;
                 li {
@@ -397,12 +391,24 @@ footer {
     }
 }
 
+#img-container-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    background-size: contain;
+    image-rendering: pixelated;
+    width: 1000px;
+}
+
 li#book-container-list div#book-container div#icon-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
     .icons {
         font-size: 30px;
         margin: 20px;
