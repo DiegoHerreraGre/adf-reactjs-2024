@@ -24,7 +24,6 @@ function NavBar() {
 
     return (
         <nav className={`navbar ${colorChange ? 'navbar-color-change' : ''}`} onMouseLeave={handleClick}>
-            <h1>Armando Di Filippo</h1>
             <section className="navbar-container-principal">
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaHome/> : <FaBars/>}

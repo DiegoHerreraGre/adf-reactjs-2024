@@ -20,6 +20,7 @@ function BookId() {
                 <p className='p-working-css'>{book ? book.price : ''}</p>
                 <Link to={book ? book.source : ''}><span className='btn-buying'>COMPRE AQUÍ</span></Link>
                 <p className='p-working-css'>{book ? book.description : ''}</p>
+                <p id='state' className='p-working-css' style={{ display: book && book.state ? 'block' : 'none' }}>{book && book.state ? book.state : null}</p>
             </div>
         </article>
     );

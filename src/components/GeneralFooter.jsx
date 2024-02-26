@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin} from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function GeneralFooter() {
     return (
@@ -24,8 +24,6 @@ function GeneralFooter() {
                     <ul id='icon-rrss'>
                         <li><FaFacebook/></li>
                         <li><FaInstagram/></li>
-                        <li><FaYoutube/></li>
-                        <li><FaLinkedin/></li>
                     </ul>
                 </div>
             </section>
