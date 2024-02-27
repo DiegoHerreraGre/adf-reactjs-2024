@@ -4,9 +4,9 @@ import Books from './components/Books';
 import NavBar from './components/NavBar';
 import GeneralFooter from './components/GeneralFooter';
 import BooksId from './components/BookId';
+import Cart from './components/Cart';
 import { Contact } from './components/Contact';
-import './App.css';
-import React from "react";
+import './App.css';;
 
 function App() {
     return (
@@ -18,6 +18,7 @@ function App() {
                 <Route path="/books/" element={<Books/>}/>
                 <Route path="/books/:id" element={<BooksId/>}/>
                 <Route path="/contact" element={<Contact/>}/>
+                <Route path="/cart" element={<Cart/>}/>
             </Routes>
             <GeneralFooter/>
         </Router>

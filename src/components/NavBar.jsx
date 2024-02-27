@@ -50,6 +50,11 @@ function NavBar() {
                             Contacto
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to='/cart' className="nav-links">
+                            Carro de compras
+                        </Link>
+                    </li>
                 </ul>
             </section>
         </nav>

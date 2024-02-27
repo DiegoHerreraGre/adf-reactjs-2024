@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css';
-import Books from './Books';
-
-async function getCart() {
-    await const goToBasket = () => {
-        window.location.href = '/cart';
+function Cart() {
+    const retrieveValue = () => {
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        return cart;
     }
-    return ()
-};
-
-export default function Cart();
+    return (
+        <div className='shopping-cart'>
+            <h2>Carrito de compras</h2>
+            <p id='total-value'>{retrieveValue() + " $ USD"}</p>
+        </div>
+    );
+}
+export default Cart;
