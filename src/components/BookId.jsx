@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import books2024  from '../data';
 import bookImage from '../bookImage';
 import '../App.css'
-import Filter from './Filter';
 function BookId() {
     const {id} = useParams();
     const book = books2024.find(book => book.id === Number(id));
@@ -11,7 +10,6 @@ function BookId() {
 
     return (
         <div>
-            <Filter />
             <article id='books-desc-main' key={id}>
                 <div>
                     <img src={bookId} alt={book ? book.title : 'No se ha encontrado el libro'}/>

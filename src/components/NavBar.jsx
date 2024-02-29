@@ -21,6 +21,11 @@ function NavBar() {
         setClick(false);
         setColorChange(false);
     };
+    async function MenuDropdown() {
+        const [menuDropdown, setMenuDropdown] = useState(false);
+        await handleClick();
+        const closeMobileMenu = () => setMenuDropdown(false);
+    }
 
     return (
         <nav className={`navbar ${colorChange ? 'navbar-color-change' : ''}`} onMouseLeave={handleClick}>
@@ -53,6 +58,11 @@ function NavBar() {
                     <li className="nav-item">
                         <Link to='/cart' className="nav-links">
                             Carro de compras
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to='/blog' className="nav-links">
+                            Blog
                         </Link>
                     </li>
                 </ul>

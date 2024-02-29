@@ -3,7 +3,7 @@
     --border-radius: 25px;
     --box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.1);
     --text-shadow: 0px 4px 10px #000000;
-    --font-family: "Roboto Thin", sans-serif;
+    --font-family: 'Montserrat', sans-serif;
     --background-color-hover: rgba(255, 213, 213, 0.54);
     --background-standard: #f8f9fa;
     --background-color-diff: rgba(142, 62, 97, 0.36);
@@ -16,6 +16,7 @@
 }
 
 * {
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     img {
@@ -29,19 +30,9 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
-    font-weight: 800;
-    color: #003a7e;
-    text-shadow: var(--text-shadow);
+    font-weight: 500;
+    color: #030000;
     height: 25vh;
-    animation: titleAnimation 3s infinite;
-}
-
-@keyframes titleAnimation {
-    0% { color: #003a7e; }
-    50% { color: #c720ff; }
-    100% { color: #003a7e; }
-    50% { color: #c720ff; }
-    0% { color: #003a7e; }
 }
 
 #container-art-list {
@@ -67,17 +58,14 @@ h1 {
             align-items: center;
             flex-wrap: wrap;
             margin: 20px;
-            border-style: solid rgba(0, 0, 0, 0.23);
             border-radius: var(--border-radius);
             padding: 20px;
             box-shadow: var(--box-shadow);
             &:hover {
                 transform: scale(1);
                 transition: ease-in-out 2s;
-                background: rgb(175,0,131);
-                background: -moz-linear-gradient(221deg, rgba(175,0,131,0.8785889355742297) 4%, rgba(255,75,219,0.80015756302521) 41%, rgba(242,171,240,0.819765406162465) 80%);
-                background: -webkit-linear-gradient(221deg, rgba(175,0,131,0.8785889355742297) 4%, rgba(255,75,219,0.80015756302521) 41%, rgba(242,171,240,0.819765406162465) 80%);
-                background: linear-gradient(221deg, rgba(175,0,131,0.8785889355742297) 4%, rgba(255,75,219,0.80015756302521) 41%, rgba(242,171,240,0.819765406162465) 80%);
+                background: rgba(255, 213, 213, 0.54);
+                background: linear-gradient(221deg, rgba(255, 213, 213, 0.54) 4%, rgb(255, 213, 213) 41%, rgb(231, 231, 231) 80%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#af0083",endColorstr="#f2abf0",GradientType=1);
                 border-radius: var(--border-radius);
                 box-shadow: var(--box-shadow);
@@ -98,10 +86,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    margin: 40px;
-    background-color: rgba(0, 0, 0, 0.23);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    background-color: rgb(255, 255, 255);
     ul {
         display: flex;
         list-style: none;
@@ -130,15 +115,14 @@ h1 {
 /*--------------General Navbar-----------------*/
 
 #book-main-container {
-    font-weight: bolder;
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px;
 }
-
 #book-container-id {
     display: flex;
     justify-content: center;
@@ -147,16 +131,13 @@ h1 {
     margin: 20px;
     h3 {
         font-size: 50px;
-        font-weight: bolder;
         color: rgba(12, 0, 27, 0.62);
-        margin-left: 200px;
-        margin-right: 200px;
-        text-shadow: var(--text-shadow);
+        text-align: center;
     }
     ul {
         list-style: none;
         li {
-            margin: 100px;
+            margin: 50px;
             a {
                 text-decoration: none;
                 color: #000;
@@ -225,6 +206,36 @@ h1 {
     }
 }
 
+/*--------------------AuxNavBar----------------*/
+
+#aux-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #C5AC8A;
+    border-radius: var(--border-radius);
+    border-style: groove;
+    width: 75%;
+    height: auto;
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin: 20px;
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 200;
+                &:hover {
+                    color: #2088ff;
+                }
+            }
+        }
+    }
+}
+/**-----------------AuxNavBar------------------*/
 /*--------------General Footer-----------------*/
 
 footer {
@@ -232,7 +243,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #ddd1f7;
+    background-color: #C5AC8A;
     ul {
         display: flex;
         list-style: none;
@@ -252,7 +263,6 @@ footer {
         font-size: 25px;
         font-weight: 800;
         color: #000000;
-        text-shadow: var(--text-shadow);
         text-align: center;
         margin: 20px;
         aspect-ratio: auto;
@@ -260,7 +270,6 @@ footer {
     p {
         font-size: 15px;
         font-weight: 400;
-        font-family: var(--font-family);
         color: #000000;
         margin: 50px;
     }
@@ -620,15 +629,11 @@ form {
 }
 
 .btn-filter {
-    background-color: #4CAF50; /* Green */
-    border: none;
+    background-color: rgba(6, 6, 6, 0.54);
     color: white;
-    padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
 }
 
@@ -660,6 +665,51 @@ form {
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             transition: ease-in-out 2s;
+        }
+    }
+}
+
+#topics-id {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    &:hover {
+        background-color: var(--background-color-hover);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        transition: ease-in-out 2s;
+    }
+    span {
+        font-size: 20px;
+        font-weight: 800;
+        color: #000000;
+        padding: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        background-color: var(--background-color-diff);
+        &:hover {
+            background-color: var(--background-color-hover);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: ease-in-out 2s;
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            margin: 20px;
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 800;
+                &:hover {
+                    color: #ff2020;
+                }
+            }
         }
     }
 }

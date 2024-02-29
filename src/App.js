@@ -6,7 +6,7 @@ import GeneralFooter from './components/GeneralFooter';
 import BooksId from './components/BookId';
 import Cart from './components/Cart';
 import { Contact } from './components/Contact';
-import './App.css';;
+import './App.css';
 
 function App() {
     return (
