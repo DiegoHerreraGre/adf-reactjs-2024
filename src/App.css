@@ -27,6 +27,10 @@
     }
 }
 
+#hero-init {
+    background-color: var(--color1);
+}
+
 h1 {
     display: flex;
     justify-content: center;

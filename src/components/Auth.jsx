@@ -46,7 +46,7 @@ function AuthUser() {
             <form onSubmit={signInWithGoogle}>
                 <button type="submit">Registrarse con Google</button>
             </form>
-            <button onClick={logOut}>Desloguearse</button>
+            <button className='btn-filter' onClick={logOut}>Desloguearse</button>
         </section>
     )
 }

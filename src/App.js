@@ -15,7 +15,7 @@ function App() {
     return (
         <Router>
             <NavBar/>
-            <div>
+            <div id='hero-init'>
                 <h1>Armando Di Filippo</h1>
                 <img src='' alt=''/>
             </div>
