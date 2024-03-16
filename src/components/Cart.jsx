@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Checkout from './Checkout';
 import '../App.css';
+import {Link} from "react-router-dom";
 
 function Cart() {
+    let [totalValue, setTotalValue] = useState(0);
     const priceFee = {
         apoyoTesis: 300,
         asesoriaHistoriaEconomica: 100,
@@ -9,11 +12,11 @@ function Cart() {
         otros: 250
     }
     const retrieveValue = () => {
-        let cart = JSON.parse(localStorage.getItem('cart'));
-        return cart;
+        let cart = localStorage.getItem('cart');
+        return cart ? JSON.parse(cart) : [];
     }
     const [cart, setCart] = useState(retrieveValue());
-    const totalValue = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    totalValue = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
     function handleAddFeeToCart (fee, price) {
         setCart(prevCart => {
@@ -26,11 +29,31 @@ function Cart() {
                 return [...prevCart, { id: fee, price: price, quantity: 1 }];
             }
         });
+        const currentFee = JSON.parse(localStorage.getItem('priceFee')) || {total: 0};
+        const newFee = {total: currentFee.total + price};
+        localStorage.setItem('priceFee', JSON.stringify(newFee));
+        setTotalValue(totalValue + price);
+    }
+    const handleReset = async () => {
+        setCart([]);
+        localStorage.removeItem('cart');
+        localStorage.removeItem('priceFee');
+        localStorage.removeItem('clickNumber')
+        setTotalValue(0);
     }
 
-    const handleReset = () => {
-        setCart([]);
+    async function handleReloadPageResetValue () {
+        await handleReset();
+        window.location.reload();
     }
+
+    async function handleCheckout(a, b) {
+        a = cart;
+        b = await handleAddFeeToCart();
+        return a + b;
+        handleReset();
+    }
+
     return (
         <section>
             <h3>Otros servicios por Fee (aprete para agregar al carrito)</h3>
@@ -54,7 +77,10 @@ function Cart() {
                     })}
                 </div>
                 <p id='total-value'>{totalValue + " $ USD"}</p>
-                <buttom className='btn-filter' onClick={handleReset}>Vaciar carro de compras</buttom>
+                <buttom className='btn-filter' onClick={handleReset && handleReloadPageResetValue}>Vaciar carro de compras</buttom>
+                <Link to='/cart/checkout'>
+                    <Checkout onClick={handleCheckout}/>
+                </Link>
             </div>
         </section>
     );

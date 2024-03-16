@@ -9,6 +9,7 @@ import { Contact } from './components/Contact';
 import BlogEntry from './components/BlogEntry';
 import Auth from './components/Auth';
 import './App.css';
+import CheckoutPage from "./components/CheckoutPage";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/auth" element={<Auth/>}/>
                 <Route path="/blog" element={<BlogEntry/>}/>
                 <Route path="/blog/:id" element={<BlogEntry/>}/>
+                <Route path='/cart/checkout' element={<CheckoutPage/>}/>
             </Routes>
             <GeneralFooter/>
         </Router>
