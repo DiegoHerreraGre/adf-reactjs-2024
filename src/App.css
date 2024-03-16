@@ -7,9 +7,11 @@
     --background-color-hover: rgba(255, 213, 213, 0.54);
     --background-standard: #f8f9fa;
     --background-color-diff: rgba(142, 62, 97, 0.36);
-    --color1: #ffffff;
-    --color2: #eae9e9;
-    --color3: #c8c8c8;
+    --color1: #CED0C6;
+    --color2: #002230;
+    --color3: #6AA5DC;
+    --color4: #BCB078;
+    --color5: #30669D;
     --color1-transparency: rgba(255, 255, 255, 0.5);
     --color2-transparency: rgba(234, 233, 233, 0.5);
     --color3-transparency: rgba(200, 200, 200, 0.5);
@@ -31,7 +33,7 @@ h1 {
     align-items: center;
     font-size: 4rem;
     font-weight: 500;
-    color: #030000;
+    color: var(--color2);
     height: 25vh;
 }
 
@@ -48,7 +50,7 @@ h1 {
         h4 {
             font-size: 30px;
             font-weight: 800;
-            color: #000000;
+            color: var(--color2);
             text-align: center;
             margin: 20px;
         }
@@ -74,7 +76,7 @@ h1 {
             p {
                 font-size: 20px;
                 font-weight: 200;
-                color: #000000;
+                color: var(--color2);
             }
         }
     }
@@ -86,7 +88,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color1);
     ul {
         display: flex;
         list-style: none;
@@ -94,10 +96,10 @@ h1 {
             margin: 20px;
             a {
                 text-decoration: none;
-                color: #000;
+                color: var(--color2);
                 font-weight: 700;
                 &:hover {
-                    color: #2088ff;
+                    color: var(--color4);
                 }
             }
         }
@@ -105,9 +107,9 @@ h1 {
     .menu-icon {
         display: block;
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 900;
-        color: #000000;
+        color: var(--color2);
         margin-left: 30px;
     }
 }
@@ -131,7 +133,7 @@ h1 {
     margin: 20px;
     h3 {
         font-size: 50px;
-        color: rgba(12, 0, 27, 0.62);
+        color: var(--color5);
         text-align: center;
     }
     ul {
@@ -140,11 +142,11 @@ h1 {
             margin: 50px;
             a {
                 text-decoration: none;
-                color: #000;
+                color: var(--color2);
                 font-weight: 600;
                 font-size: 30px;
                 &:hover {
-                    color: #ff2020;
+                    color: var(--color4);
                 }
 
             }
@@ -175,10 +177,10 @@ h1 {
                     margin: 20px;
                     a {
                         text-decoration: none;
-                        color: #000;
+                        color: var(--color2);
                         font-weight: 800;
                         &:hover {
-                            color: #ff2020;
+                            color: var(--color4);
                         }
                     }
                 }
@@ -189,13 +191,13 @@ h1 {
         font-size: 20px;
         font-weight: 200;
         font-style: italic;
-        color: #000000;
+        color: var(--color2);
     }
     #price-tag {
         font-style: normal;
         font-size: 30px;
         font-weight: 800;
-        color: #ff2020;
+        color: var(--color5);
         padding: 15px;
         border-style: groove;
         border-radius: var(--border-radius);
@@ -213,7 +215,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #C5AC8A;
+    background-color: var(--color1);
     border-radius: var(--border-radius);
     border-style: groove;
     width: 75%;
@@ -226,10 +228,10 @@ h1 {
             margin: 20px;
             a {
                 text-decoration: none;
-                color: #000;
+                color: var(--color2);
                 font-weight: 200;
                 &:hover {
-                    color: #2088ff;
+                    color: var(--color4);
                 }
             }
         }
@@ -243,7 +245,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #C5AC8A;
+    background-color: var(--color1);
     ul {
         display: flex;
         list-style: none;
@@ -251,10 +253,10 @@ footer {
             margin: 20px;
             a {
                 text-decoration: none;
-                color: #000;
+                color: var(--color2);
                 font-weight: 700;
                 &:hover {
-                    color: #2088ff;
+                    color: var(--color4);
                 }
             }
         }
@@ -262,7 +264,7 @@ footer {
     h3 {
         font-size: 25px;
         font-weight: 800;
-        color: #000000;
+        color: var(--color2);
         text-align: center;
         margin: 20px;
         aspect-ratio: auto;
@@ -270,7 +272,7 @@ footer {
     p {
         font-size: 15px;
         font-weight: 400;
-        color: #000000;
+        color: var(--color2);
         margin: 50px;
     }
     .rrss {
@@ -286,11 +288,11 @@ footer {
                 margin: 20px;
                 a {
                     text-decoration: none;
-                    color: #003a7e;
+                    color: var(--color2);
                     font-weight: 900;
                     font-size: 30px;
                     &:hover {
-                        color: #2088ff;
+                        color: var(--color4);
                     }
                 }
             }
@@ -298,9 +300,9 @@ footer {
     }
     #icon-rrss {
         font-size: 40px;
-        color: #003a7e;
+        color: var(--color2);
         &:hover {
-            color: #c720ff;
+            color: var(--color4);
         }
     }
 }
@@ -319,24 +321,24 @@ footer {
         font-size: 50px;
         margin-left: 70px;
         font-weight: bolder;
-        color: #ff2020;
+        color: var(--color5);
         text-shadow: var(--text-shadow);
     }
     p {
         display: inline-block;
         font-size: 30px;
         font-weight: 800;
-        color: #000000;
+        color: var(--color2);
         text-align: justify;
         margin: 60px;
         }
     a {
         text-decoration: none;
-        color: #000000;
+        color: var(--color2);
         font-weight: 800;
         width: 10%;
         &:hover {
-            color: #ff2020;
+            color: var(--color4);
         }
     }
     #effect-shake {
@@ -354,7 +356,7 @@ footer {
         align-items: center;
         border-style: groove;
         width: 75%;
-        background-color: rgba(142, 62, 97, 0.36);
+        background-color: rgba(255, 213, 213, 0.54);
         border-radius: var(--border-radius);
         padding: 30px;
         box-shadow: var(--box-shadow)
@@ -463,15 +465,14 @@ footer {
         list-style: none;
     }
     .container-list {
-        border-style: groove;
         padding: 20px;
-        background-color: rgba(255, 213, 213, 0.54);
+        background-color: var(--color1);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         &:hover {
             transform: scale(1.2);
             transition: ease-in-out 1s;
-            background-color: rgba(255, 213, 213, 0.54);
+            background-color: var(--color1-transparency);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
@@ -500,9 +501,9 @@ li#book-container-list div#book-container div#icon-container {
     .icons {
         font-size: 30px;
         margin: 20px;
-        color: rgba(0, 58, 126, 0.61);
+        color: var(--color2);
         &:hover {
-            color: rgba(0, 0, 0, 0.13);
+            color: var(--color4);
         }
     }
 }
@@ -524,7 +525,7 @@ li#book-container-list div#book-container div#icon-container {
     p {
         font-size: 30px;
         font-weight: 800;
-        color: #000000;
+        color: var(--color2);
         text-align: center;
         margin: 20px;
     }
@@ -536,9 +537,10 @@ li#book-container-list div#book-container div#icon-container {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 10s linear infinite;
+    animation-play-state: running;
     font-size: 40px;
     font-weight: 800;
-    color: rgba(255, 32, 32, 0.23);
+    color: var(--color5);
     &:hover {
         animation-play-state: paused;
     }
@@ -655,7 +657,7 @@ form {
     #total-value {
         font-size: 40px;
         font-weight: 800;
-        color: #ff2020;
+        color: var(--color5);
         padding: 20px;
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
@@ -686,7 +688,7 @@ form {
     span {
         font-size: 20px;
         font-weight: 800;
-        color: #000000;
+        color: var(--color2);
         padding: 20px;
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
@@ -704,14 +706,75 @@ form {
             margin: 20px;
             a {
                 text-decoration: none;
-                color: #000;
+                color: var(--color2);
                 font-weight: 800;
                 &:hover {
-                    color: #ff2020;
+                    color: var(--color4);
                 }
             }
         }
     }
 }
 
+#contact {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color2);
+    margin-left: 40px;
+    a {
+        color: var(--color1);
+    }
+}
+
+/*-----------------SHOPPING CART-----------------*/
+
+#price-container-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .price-item {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: 20px;
+        padding: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        background-color: var(--background-color-diff);
+        &:hover {
+            background-color: var(--background-color-hover);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: ease-in-out 2s;
+        }
+        span {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--color2);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            background-color: var(--background-color-diff);
+            &:hover {
+                background-color: var(--background-color-hover);
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+                transition: ease-in-out 2s;
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                margin: 20px;
+                a {
+                    text-decoration: none;
+                    color: var(--color2);
+                    font-weight: 800;
+                    &:hover {
+                        color: var(--color4);
+                    }
+                }
+            }
+        }
+    }
+}
 

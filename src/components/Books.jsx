@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {CgAdd, CgCloseR} from 'react-icons/cg';
 import { FaShoppingBasket } from 'react-icons/fa';
-import books2024 from '../data';
+import { books2024 } from '../data';
 import bookImage from '../bookImage';
 import { Link } from 'react-router-dom';
 import '../App.css'
@@ -10,7 +10,7 @@ import AuxNavBar from './AuxNavBar';
 function Books() {
     const [clickNumber, setClickNumber] = useState(0);
     const [filteredBooks, setFilteredBooks] = useState(books2024);
-    let [cart, setCart] = useState(0);
+    let [cart, setCart] = useState([]);
 
     useEffect(() => {
         localStorage.setItem('clickNumber', JSON.stringify(clickNumber));
@@ -38,15 +38,42 @@ function Books() {
         window.location.href = `/books/${id}`;
     }
 
-    const handleCart = (bookPrice) => {
+    const handleCart = (bookPrice, bookId) => {
         setClickNumber(prevClickNumber => prevClickNumber + 1);
-        setCart(prevCart => prevCart + bookPrice);
+        setCart(prevCart => {
+            const existingItem = prevCart.find(item => item.id === bookId);
+            if (existingItem) {
+                return prevCart.map(item =>
+                    item.id === bookId ? { ...item, quantity: item.quantity + 1 } : item
+                );
+            } else {
+                return [...prevCart, { id: bookId, price: bookPrice, quantity: 1 }];
+            }
+        });
     }
 
     const handleSubtract = (bookPrice) => {
-        setClickNumber(prevClickNumber => prevClickNumber - 1);
-        setCart(prevCart => prevCart - bookPrice);
+        clickNumber > 0 ? setClickNumber(clickNumber - 1) : setClickNumber(0);
+        if (cart.some(item => item.price === bookPrice === item.quantity > 0)) {
+            setCart(prevCart => prevCart.map(item => {
+                if (item.price === bookPrice) {
+                    return {...item, quantity: item.quantity - 1}
+                }
+                return item
+            }))
+        }
     }
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
+    useEffect(() => {
+        const storedCart = JSON.parse(localStorage.getItem('cart'));
+        if (storedCart) {
+            setCart(storedCart);
+        }
+    }, []);
 
     return (
         <section id='book-container-id'>
@@ -67,7 +94,7 @@ function Books() {
                 ))}
             </div>
             <ul id='div-specific-book'>
-                {filteredBooks.map(({id, title, source, year, editorial, price}) => {
+                {filteredBooks.map(({id, title, source, year, editorial, price, source2}) => {
                     const bookId = bookImage[id];
                     const bookPrice = parseInt(price, 10);
                     return (
@@ -80,7 +107,8 @@ function Books() {
                                 <span className='content-book' id='price-tag'>{price}</span>
                                 <span className='content-book'>{year}</span>
                                 <span className='content-book'>{editorial}</span>
-                                <Link to={source}><span className='btn-buying'>COMPRE AQUÍ</span></Link>
+                                <Link to={source}><span className='btn-buying'>Comprar en Amazon Books</span></Link>
+                                <Link to={source2}><span className='btn-buying'>Comprar en Editorial</span></Link>
                                 <div id='icon-container'>
                                     <div className='icons' onClick={() => handleCart(bookPrice)}>
                                         <CgAdd/>

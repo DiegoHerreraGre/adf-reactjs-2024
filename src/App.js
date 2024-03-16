@@ -6,19 +6,27 @@ import GeneralFooter from './components/GeneralFooter';
 import BooksId from './components/BookId';
 import Cart from './components/Cart';
 import { Contact } from './components/Contact';
+import BlogEntry from './components/BlogEntry';
+import Auth from './components/Auth';
 import './App.css';
 
 function App() {
     return (
         <Router>
             <NavBar/>
-            <h1>Armando Di Filippo</h1>
+            <div>
+                <h1>Armando Di Filippo</h1>
+                <img src='' alt=''/>
+            </div>
             <Routes>
                 <Route index path="/" element={<Home/>}/>
                 <Route path="/books/" element={<Books/>}/>
                 <Route path="/books/:id" element={<BooksId/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/auth" element={<Auth/>}/>
+                <Route path="/blog" element={<BlogEntry/>}/>
+                <Route path="/blog/:id" element={<BlogEntry/>}/>
             </Routes>
             <GeneralFooter/>
         </Router>

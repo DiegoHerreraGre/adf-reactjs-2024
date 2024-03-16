@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import books2024  from '../data';
+import { books2024 }  from '../data';
 import bookImage from '../bookImage';
 import '../App.css'
 function BookId() {

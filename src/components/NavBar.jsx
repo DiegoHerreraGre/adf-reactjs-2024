@@ -5,13 +5,11 @@ import '../App.css';
 
 function NavBar() {
     const [click, setClick] = useState(false);
-    const [colorChange, setColorChange] = useState(false);
     const [wordOnNavBar, setWordOnNavBar] = useState(false);
 
     const handleClick = async () => {
         setWordOnNavBar(true);
         setClick(!click);
-        setColorChange(true);
         await new Promise((resolve) => {
             setTimeout(() => {
                 resolve();
@@ -19,7 +17,6 @@ function NavBar() {
         });
         setWordOnNavBar(false);
         setClick(false);
-        setColorChange(false);
     };
     async function MenuDropdown() {
         const [menuDropdown, setMenuDropdown] = useState(false);
@@ -28,7 +25,7 @@ function NavBar() {
     }
 
     return (
-        <nav className={`navbar ${colorChange ? 'navbar-color-change' : ''}`} onMouseLeave={handleClick}>
+        <nav>
             <section className="navbar-container-principal">
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaHome/> : <FaBars/>}
@@ -51,11 +48,6 @@ function NavBar() {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/contact' className="nav-links">
-                            Contacto
-                        </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link to='/cart' className="nav-links">
                             Carro de compras
                         </Link>
@@ -65,9 +57,22 @@ function NavBar() {
                             Blog
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to='/auth' className="nav-links">
+                            Autenticación
+                        </Link>
+                    </li>
+                    <div id='contact'>
+                        <li className="nav-item">
+                            <Link to='/contact' className="nav-links">
+                                Contacto
+                            </Link>
+                        </li>
+                    </div>
                 </ul>
             </section>
         </nav>
     );
 }
+
 export default NavBar;
